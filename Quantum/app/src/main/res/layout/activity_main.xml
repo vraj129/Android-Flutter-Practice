@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E8E3E3"
+    tools:context=".MainActivity">
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="-14dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardView"
+        app:strokeWidth="2dp"
+        app:cardCornerRadius="24dp"
+        app:strokeColor="#F1BEBE">
+        <com.google.android.material.tabs.TabLayout
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            android:id="@+id/tab_layout"
+            app:tabIndicatorGravity="stretch"
+            app:tabMaxWidth="0dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="?attr/colorAccent"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="?attr/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout_view"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:id="@+id/viewpager"
+            android:layout_marginTop="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="Login With"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/google"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:elevation="35dp"
+                android:src="@drawable/google"
+                android:backgroundTint="@color/white" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="16dp"
+                android:id="@+id/facebook"
+                android:elevation="35dp"
+                android:src="@drawable/facebook"
+                android:backgroundTint="@color/white" />
+        </LinearLayout>
+
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
